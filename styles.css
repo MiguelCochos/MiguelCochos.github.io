@@ -9,14 +9,14 @@
     --glass-border: rgba(255, 255, 255, 0.1);
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background: radial-gradient(circle at top left, #075985, #0f172a 50%, #082f49);
     background-attachment: fixed;
     min-height: 100vh;
@@ -41,6 +41,7 @@ body{
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -52,6 +53,7 @@ body{
         opacity: 0;
         transform: translateX(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -63,6 +65,7 @@ body{
         opacity: 0;
         transform: scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -70,24 +73,8 @@ body{
 }
 
 .reveal {
-    opacity: 0;
-    transition: all 0.8s ease-out;
-}
-
-.reveal.active {
     opacity: 1;
-}
-
-.fade-up.active {
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.slide-left.active {
-    animation: slideInLeft 0.8s ease-out forwards;
-}
-
-.scale-in.active {
-    animation: scaleIn 0.8s ease-out forwards;
+    transition: all 0.8s ease-out;
 }
 
 /* Window controls decoration */
@@ -103,9 +90,17 @@ body{
     border-radius: 50%;
 }
 
-.red { background: #ff5f56; }
-.yellow { background: #ffbd2e; }
-.green { background: #27c93f; }
+.red {
+    background: #ff5f56;
+}
+
+.yellow {
+    background: #ffbd2e;
+}
+
+.green {
+    background: #27c93f;
+}
 
 /* Header & Profile */
 header {
@@ -118,7 +113,8 @@ header {
 
 .profile-card {
     display: flex;
-    flex-direction: column; /* Changed to accommodate controls at top */
+    flex-direction: column;
+    /* Changed to accommodate controls at top */
     padding: 20px 30px 30px 30px;
     flex: 1;
 }
@@ -319,15 +315,15 @@ header {
     body {
         padding: 20px 5%;
     }
-    
+
     header {
         flex-direction: column;
     }
-    
+
     .link {
         flex-direction: row;
     }
-    
+
     .about-section {
         grid-template-columns: 1fr;
     }
@@ -338,15 +334,15 @@ header {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .profile-img-container {
         margin: 0 0 20px 0;
     }
-    
+
     .helloWorld p:nth-child(2) {
         font-size: 1.8rem;
     }
-    
+
     .about-text h1 {
         font-size: 2.5rem;
     }
