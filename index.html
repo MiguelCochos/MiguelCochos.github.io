@@ -14,49 +14,82 @@
 </head>
 
 <body>
-    <header class="reveal fade-up">
-        <div class="profile-card glass">
-            <div class="window-controls">
-                <div class="ball red"></div>
-                <div class="ball yellow"></div>
-                <div class="ball green"></div>
-            </div>
-            <div class="profile-content">
-                <div class="profile-img-container">
-                    <img src="image/598401fd-2269-4940-98a8-c34ab31e3c0d.png" alt="Miguel Cochos">
-                </div>
-                <div class="helloWorld">
-                    <p>¡Hola, Mundo! 🌎</p>
-                    <p>Mi nombre es <span>Miguel Cochos</span></p>
-                    <p>Entusiasta de la programación y el desarrollo web</p>
-                </div>
-            </div>
+    <header class="nav-bar">
+        <div class="nav-logo">
+            <img onclick="location.href='#home'" src="image/Logo-dorado-sin-fondo.png" alt="Logo">
         </div>
-
-        <nav class="contLinks glass">
-            <ul class="link">
+        <nav class="nav-links">
+            <ul>
                 <li>
-                    <div title="GitHub" onclick="window.open('https://github.com/MiguelCochos', '_blank')">
-                        <img src="image/github.png" alt="GitHub">
-                    </div>
+                    <a href="#home">Inicio</a>
                 </li>
                 <li>
-                    <div title="Gmail" onclick="location.href='mailto:miguelcohos8@gmail.com'">
-                        <img src="image/gmail.png" alt="Gmail">
-                    </div>
+                    <a href="#about-me">Sobre mí</a>
                 </li>
                 <li>
-                    <div title="LinkedIn"
-                        onclick="window.open('https://www.linkedin.com/in/miguel-cochos-28a952327', '_blank')">
-                        <img src="image/linkedin.png" alt="LinkedIn">
-                    </div>
+                    <a href="#skills">Habilidades</a>
+                </li>
+                <li>
+                    <a href="#projects">Proyectos</a>
+                </li>
+                <li>
+                    <a href="#contact">Contacto</a>
                 </li>
             </ul>
         </nav>
     </header>
-
     <main class="contFather">
-        <section class="about-section">
+        <section id="home" style="scroll-margin-top: 90px">
+            <div class="video-container">
+                <div class="logo-container">
+                    <img src="image/Logo-dorado-sin-fondo.png" alt="Logo">
+                    <p>Si tu puedes soñarlo, yo puedo desarrollarlo 💎</p>
+                </div>
+                <video playsinline data-automation="VideoPlayer" loop muted autoplay
+                    poster="https://www.shutterstock.com/shutterstock/videos/1010011586/thumb/1.jpg?ip=x480"
+                    preload="none" aria-label="video-player" controlslist="nodownload">
+                    <source src="src/motherboard.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        <section id="about-me" class="about-section" style="scroll-margin-top: 90px ;">
+            <div class="profile-card glass">
+                <div class="window-controls">
+                    <div class="ball red"></div>
+                    <div class="ball yellow"></div>
+                    <div class="ball green"></div>
+                </div>
+                <div class="profile-content">
+                    <div class="profile-img-container">
+                        <img src="image/598401fd-2269-4940-98a8-c34ab31e3c0d.png" alt="Miguel Cochos">
+                    </div>
+                    <div class="helloWorld">
+                        <p>¡Hola, Mundo! 🌎</p>
+                        <p>Mi nombre es <span>Miguel Cochos</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contLinks glass">
+                <ul class="link">
+                    <li>
+                        <div title="GitHub" onclick="window.open('https://github.com/MiguelCochos', '_blank')">
+                            <img src="image/github.png" alt="GitHub">
+                        </div>
+                    </li>
+                    <li>
+                        <div title="Gmail" onclick="location.href='mailto:miguelcohos8@gmail.com'">
+                            <img src="image/gmail.png" alt="Gmail">
+                        </div>
+                    </li>
+                    <li>
+                        <div title="LinkedIn"
+                            onclick="window.open('https://www.linkedin.com/in/miguel-cochos-28a952327', '_blank')">
+                            <img src="image/linkedin.png" alt="LinkedIn">
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <article class="about-text glass reveal slide-left">
                 <div class="window-controls">
                     <div class="ball red"></div>
@@ -72,13 +105,13 @@
                     también me ofrezca la oportunidad de crecer profesionalmente, cumpliendo con mis metas y las
                     expectativas del equipo.</p>
             </article>
-            <div class="about-image reveal scale-in">
+            <div id="mask-image" class="about-image reveal scale-in">
                 <img src="image/portafolio de desarrollador web o programador con un estilo minimalista y profesional.png"
                     alt="Miguel Cochos Portfolio">
             </div>
         </section>
 
-        <section class="skills glass reveal fade-up">
+        <section id="skills" class="skills glass reveal fade-up" style="scroll-margin-top: 90px ;">
             <h2>Habilidades</h2>
 
             <div class="contSkill reveal fade-up" style="animation-delay: 0.7s;">
@@ -228,6 +261,10 @@
         </section>
     </main>
     <script src="scripts.js"></script>
+    <footer class="footer">
+        <p>Todos los derechos reservados © 2026</p>
+        <p>Desarrollado por Miguel Cochos</p>
+    </footer>
 </body>
 
 </html>
