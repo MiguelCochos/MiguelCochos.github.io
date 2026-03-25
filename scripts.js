@@ -35,7 +35,7 @@ menuButton.addEventListener('click', () => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 1024) {
         navLinks.style.display = 'none';
     }
 });
@@ -48,7 +48,7 @@ links.forEach(link => {
     link.addEventListener('click', () => {
         links.forEach(l => l.classList.remove('linkOn'));
         link.classList.add('linkOn');
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 1024) {
             navLinks.classList.remove('active');
             setTimeout(() => {
                 navLinks.style.display = 'none';
