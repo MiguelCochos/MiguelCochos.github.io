@@ -16,24 +16,27 @@
 <body>
     <header class="nav-bar">
         <div class="nav-logo">
-            <img onclick="location.href='#home'" src="image/Logo-dorado-sin-fondo.png" alt="Logo">
+            <img onclick="location.href='#home'" src="image/Logo-blanco-sin-fondo.png" alt="Logo">
         </div>
-        <nav class="nav-links">
+        <button id="menuButton" class="menu-button">
+            <p>&#9776;</p>
+        </button>
+        <nav id="navLinks" class="nav-links">
             <ul>
                 <li>
-                    <a href="#home">Inicio</a>
+                    <a href="#home" class="navButtton linkOn">Inicio</a>
                 </li>
                 <li>
-                    <a href="#about-me">Sobre mí</a>
+                    <a href="#about-me" class="navButtton">Sobre mí</a>
                 </li>
                 <li>
-                    <a href="#skills">Habilidades</a>
+                    <a href="#skills" class="navButtton">Habilidades</a>
                 </li>
                 <li>
-                    <a href="#projects">Proyectos</a>
+                    <a href="#projects" class="navButtton">Proyectos</a>
                 </li>
                 <li>
-                    <a href="#contact">Contacto</a>
+                    <a href="#contact" class="navButtton">Contacto</a>
                 </li>
             </ul>
         </nav>
@@ -42,12 +45,12 @@
         <section id="home" style="scroll-margin-top: 90px">
             <div class="video-container">
                 <div class="logo-container">
-                    <img src="image/Logo-dorado-sin-fondo.png" alt="Logo">
+                    <img src="image/Logo-blanco-sin-fondo.png" alt="Logo">
                     <p>Si tu puedes soñarlo, yo puedo desarrollarlo 💎</p>
                 </div>
-                <video playsinline data-automation="VideoPlayer" loop muted autoplay
-                    poster="https://www.shutterstock.com/shutterstock/videos/1010011586/thumb/1.jpg?ip=x480"
-                    preload="none" aria-label="video-player" controlslist="nodownload">
+                <video playsinline data-automation="VideoPlayer" loop muted autoplay aria-label="video-player"
+                    controlslist="nodownload nofullscreen nopictureinpicture" oncontextmenu="return false;"
+                    disablePictureInPicture>
                     <source src="src/motherboard.mp4" type="video/mp4">
                 </video>
             </div>

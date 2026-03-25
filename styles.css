@@ -7,6 +7,15 @@
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
     --glass-border: rgba(255, 255, 255, 0.1);
+
+}
+
+#detach-button-host {
+    display: none;
+}
+
+#pip-button-host {
+    display: none;
 }
 
 * {
@@ -24,6 +33,10 @@ body {
     color: var(--text-main);
     overflow-x: hidden;
     padding-top: 90px;
+}
+
+.menu-button {
+    display: none;
 }
 
 .nav-bar {
@@ -407,10 +420,86 @@ body {
 @media (max-width: 1024px) {
     body {}
 
-    /* .nav-bar {
+    .menu-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 10;
+    }
+
+    .menu-button p {
+        color: var(--text-main);
+        width: auto;
+        height: auto;
+        font-size: 2rem;
+        border-radius: 10px;
+    }
+
+    .nav-links {
+        opacity: 0;
         flex-direction: column;
-        margin: 0 5% 40px 5%;
-    } */
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        right: 5%;
+        background: var(--card-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid var(--glass-border);
+        padding: 20px;
+        gap: 15px;
+        animation: slideUp 0.5s ease;
+    }
+
+    .nav-links ul {
+        display: flex;
+        width: 100%;
+        text-align: right;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        opacity: 1;
+        animation: slideDown 0.5s ease;
+    }
+
+    .linkOn {
+        padding-right: 10px;
+        border-right: 5px solid var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        to {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    }
 
     .contFather {
         margin: 0 5%;
@@ -430,6 +519,12 @@ body {
 }
 
 @media (max-width: 640px) {
+
+    .logo-container p {
+        width: 80%;
+        text-align: center;
+    }
+
     .profile-card {
         flex-direction: column;
         text-align: center;
