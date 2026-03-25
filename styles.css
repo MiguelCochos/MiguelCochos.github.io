@@ -535,6 +535,12 @@ body {
         transition: all 0.3s ease;
     }
 
+    @keyframes slideBarOn {
+        0% {}
+
+        100% {}
+    }
+
     @keyframes slideDown {
         0% {
             opacity: 0;
