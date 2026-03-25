@@ -84,6 +84,39 @@ body {
     color: var(--primary-color);
 }
 
+.nav-links .linkOn {
+    color: var(--primary-color);
+    position: relative;
+    /* Necesario para anclar el borde */
+    border-bottom: none;
+    /* Quitamos el borde real */
+}
+
+/* Creamos el "borde" animado con un pseudo-elemento */
+.nav-links .linkOn::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    /* Lo pegamos abajo */
+    left: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    /* Aplicamos tu animación aquí */
+    animation: slideBarOn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideBarOn {
+    0% {
+        width: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
 .video-container {
     border-radius: 20px;
     height: 400px;
@@ -495,19 +528,20 @@ body {
         animation: slideDown 0.5s ease;
     }
 
-    .linkOn {
+    .nav-links .linkOn {
+        border-bottom: none;
         padding-right: 10px;
         border-right: 5px solid var(--primary-color);
         transition: all 0.3s ease;
     }
 
     @keyframes slideDown {
-        from {
+        0% {
             opacity: 0;
             transform: translateY(-20px);
         }
 
-        to {
+        100% {
             opacity: 1;
             transform: translateY(0);
         }

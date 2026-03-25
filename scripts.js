@@ -48,9 +48,11 @@ links.forEach(link => {
     link.addEventListener('click', () => {
         links.forEach(l => l.classList.remove('linkOn'));
         link.classList.add('linkOn');
-        navLinks.classList.remove('active');
-        setTimeout(() => {
-            navLinks.style.display = 'none';
-        }, 500);
+        if (window.innerWidth < 768) {
+            navLinks.classList.remove('active');
+            setTimeout(() => {
+                navLinks.style.display = 'none';
+            }, 500);
+        }
     });
 });
