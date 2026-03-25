@@ -418,7 +418,9 @@ body {
 
 /* Responsive */
 @media (max-width: 1024px) {
-    body {}
+    body {
+        height: 100dvh;
+    }
 
     .menu-button {
         display: flex;
@@ -441,17 +443,39 @@ body {
         border-radius: 10px;
     }
 
+    .nav-bar {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: transparent !important;
+        /* Lo hacemos invisible */
+        box-shadow: none;
+        border: none;
+    }
+
+    .nav-bar::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--card-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--glass-border);
+        z-index: -1;
+        /* Se queda atrás de los links y el logo */
+    }
+
     .nav-links {
-        opacity: 0;
         flex-direction: column;
         position: absolute;
         top: 100%;
         left: 50%;
         right: 5%;
         background: var(--card-bg);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
         border-top: 1px solid var(--glass-border);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
         padding: 20px;
         gap: 15px;
         animation: slideUp 0.5s ease;
