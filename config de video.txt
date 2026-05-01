@@ -1,0 +1,5 @@
+<video playsinline data-automation="VideoPlayer" loop muted autoplay aria-label="video-player"
+    controlslist="nodownload nofullscreen nopictureinpicture" oncontextmenu="return false;"
+    disablePictureInPicture>
+    <source src="src/motherboard.mp4" type="video/mp4">
+</video>

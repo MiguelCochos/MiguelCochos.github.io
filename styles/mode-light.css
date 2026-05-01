@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../src/RobotoSlab-VariableFont_wght.ttf');
+}
+
+body.light-mode {
+    --primary-color: #0284c7;
+    --secondary-color: #2563eb;
+    --accent-color: #0ea5e9;
+    --bg: radial-gradient(circle at top left, #e0f2fe, #f8fafc 50%, #f1f5f9);
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --text-main: #000000;
+    --text-muted: #475569;
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --mask-bg: #ffffff;
+    --scroll-start: #ffffff;
+    --scroll-mid: #000000;
+}
+
+body.light-mode #home {
+    background: var(--bg);
+}
+
+body.light-mode #navBar a {
+    color: var(--text-main);
+}
+
+body.light-mode #navBar #logoMC {
+    filter: brightness(0);
+}
+
+body.light-mode .link img {
+    filter: brightness(0);
+}
+
+body.light-mode .skillTitle img[style*="invert"] {
+    filter: brightness(0) !important;
+}
+
+body.light-mode .contSkill {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+body.light-mode .contSkill:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .indicator {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .video-container .info-container p {
+    color: #ffffff;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000
+}
+
+body.light-mode #mechanism #engranaje1,
+body.light-mode #mechanism #engranaje2 {
+    filter: invert(0);
+    transition: filter 2s ease-in-out;
+}
+
+body.light-mode .about-text h1 {
+    margin-bottom: 10px;
+    background: linear-gradient(to bottom right, #305cd3 30%, #23b9e2 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.light-mode .contFather {
+    margin: 0 5%;
+}

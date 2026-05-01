@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const revealElements = document.querySelectorAll('.reveal');
     revealElements.forEach(el => observer.observe(el));
+
+    if (window.innerWidth < 1024) {
+        navLinks.style.display = 'none';
+    }
+
+
+
 });
 
 /* Menu desplegable */
@@ -34,12 +41,6 @@ menuButton.addEventListener('click', () => {
     }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-    if (window.innerWidth < 1024) {
-        navLinks.style.display = 'none';
-    }
-});
-
 /* Resaltar enlace activo */
 
 const links = document.querySelectorAll('.navButtton');
@@ -55,4 +56,59 @@ links.forEach(link => {
             }, 500);
         }
     });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loadPage = document.getElementById('loadPage');
+    loadPage.style.display = 'none';
+});
+
+//Animacion del scroll
+
+gsap.registerPlugin(ScrollTrigger);
+
+const tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#home",
+        start: "top top",
+        end: "+=90%",
+        ease: "power2.out",
+        scrub: 1,
+    }
+});
+
+tl.to("#inspiration", { duration: 25, scale: 1 })
+    .to("#inspiration", { duration: 25, opacity: 0 }, "<")
+    .to("#logo-container", {
+        duration: 50, maskSize: "100px", onComplete: () => {
+            document.getElementById("navBar").style.display = "flex";
+            document.getElementById("inspiration").pause();
+            document.getElementById("inspiration").currentTime = 0;
+        },
+        onUpdate: () => {
+            document.getElementById("navBar").style.display = "none";
+            document.getElementById("inspiration").play();
+        }
+    }, "<");
+
+const scrollIndicator = document.querySelector(".scrollIndicator");
+scrollIndicator.addEventListener("click", () => {
+    let windLength = window.innerHeight - 40;
+    scrollBy(0, windLength);
+});
+
+
+//Bucle de animacion del engranaje
+gsap.to("#mechanism #engranaje1", {
+    duration: 1,
+    rotation: 360,
+    repeat: -1,
+    ease: "linear"
+});
+gsap.to("#mechanism #engranaje2", {
+    duration: 1,
+    rotation: -360,
+    repeat: -1,
+    ease: "linear"
 });

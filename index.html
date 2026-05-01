@@ -6,17 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel Cochos | Portfolio</title>
     <link rel="shortcut icon" href="image/lenguaje-de-codificacion.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="styles/mode-dark.css">
+    <link rel="stylesheet" href="styles/mode-light.css">
+    <link rel="stylesheet" href="styles/load-page.css">
 </head>
 
 <body>
-    <header class="nav-bar">
+
+    <!-- pantalla de carga -->
+    <div id="loadPage">
+        <div class="load-container">
+            <img src="image/Logo-blanco-sin-fondo.png" alt="Logo">
+        </div>
+        <div class="load-container">
+            <h1>Miguel Cochos</h1>
+            <p>Ingeniero en Informática</p>
+        </div>
+    </div>
+
+    <div class="styleMode">
+        <button id="styleModeButton" class="dark">
+            🌙
+        </button>
+    </div>
+    <header id="navBar" class="nav-bar">
         <div class="nav-logo">
-            <img onclick="location.href='#home'" src="image/Logo-blanco-sin-fondo.png" alt="Logo">
+            <img id="logoMC" onclick="location.href='#home'" src="image/Logo-blanco-sin-fondo.png" alt="Logo">
         </div>
         <button id="menuButton" class="menu-button">
             <p>&#9776;</p>
@@ -41,11 +56,16 @@
             </ul>
         </nav>
     </header>
-    <main class="contFather">
-        <section id="home" style="scroll-margin-top: 90px">
-            <div class="video-container">
-                <div class="logo-container">
-                    <img src="image/Logo-blanco-sin-fondo.png" alt="Logo">
+    <section id="home" style="scroll-margin-top: 90px">
+        <div id="homeMask">
+            <div id="logo-container">
+                <video id="inspiration" src="image/Lange Datograph Perpetual Tourbillon Jumping Minutes Mechanism.mp4"
+                    autoplay loop muted controlslist="nodownload nofullscreen nopictureinpicture"
+                    oncontextmenu="return false;" disablePictureInPicture></video>
+            </div>
+            <div id="video-container" class="video-container" style="scroll-margin-top: 40px">
+                <div class="info-container">
+                    <!-- Aqui se vera el logo de MC -->
                     <p>Si tu puedes soñarlo, yo puedo desarrollarlo 💎</p>
                 </div>
                 <video playsinline data-automation="VideoPlayer" loop muted autoplay aria-label="video-player"
@@ -54,7 +74,12 @@
                     <source src="src/motherboard.mp4" type="video/mp4">
                 </video>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <main class="contFather">
+
+        <!-- Sobre mi -->
         <section id="about-me" class="about-section" style="scroll-margin-top: 90px ;">
             <div class="profile-card glass">
                 <div class="window-controls">
@@ -73,26 +98,16 @@
                 </div>
             </div>
 
-            <div class="contLinks glass">
-                <ul class="link">
-                    <li>
-                        <div title="GitHub" onclick="window.open('https://github.com/MiguelCochos', '_blank')">
-                            <img src="image/github.png" alt="GitHub">
-                        </div>
-                    </li>
-                    <li>
-                        <div title="Gmail" onclick="location.href='mailto:miguelcohos8@gmail.com'">
-                            <img src="image/gmail.png" alt="Gmail">
-                        </div>
-                    </li>
-                    <li>
-                        <div title="LinkedIn"
-                            onclick="window.open('https://www.linkedin.com/in/miguel-cochos-28a952327', '_blank')">
-                            <img src="image/linkedin.png" alt="LinkedIn">
-                        </div>
-                    </li>
-                </ul>
+            <div id="mechanism" class="mechanism reveal">
+                <img id="engranaje1" src="image/engranaje1.png" alt="Mecanismo">
+                <img id="engranaje2" src="image/engranaje2.png" alt="Mecanismo">
             </div>
+
+            <div id="mask-image" class="about-image reveal scale-in">
+                <img src="image/portafolio de desarrollador web o programador con un estilo minimalista y profesional.png"
+                    alt="Miguel Cochos Portfolio">
+            </div>
+
             <article class="about-text glass reveal slide-left">
                 <div class="window-controls">
                     <div class="ball red"></div>
@@ -108,12 +123,9 @@
                     también me ofrezca la oportunidad de crecer profesionalmente, cumpliendo con mis metas y las
                     expectativas del equipo.</p>
             </article>
-            <div id="mask-image" class="about-image reveal scale-in">
-                <img src="image/portafolio de desarrollador web o programador con un estilo minimalista y profesional.png"
-                    alt="Miguel Cochos Portfolio">
-            </div>
         </section>
 
+        <!-- Habilidades -->
         <section id="skills" class="skills glass reveal fade-up" style="scroll-margin-top: 90px ;">
             <h2>Habilidades</h2>
 
@@ -151,7 +163,7 @@
 
             <div class="contSkill reveal fade-up" style="animation-delay: 0.1s;">
                 <div class="skillTitle">
-                    <img src="image/js.png" alt="JavaScript" style="height: 35px;">
+                    <img id="jsLogo" src="image/js.png" alt="JavaScript" style="filter: invert(1); height: 35px;">
                     <h4>JavaScript</h4>
                 </div>
                 <div class="indicator">
@@ -161,7 +173,7 @@
 
             <div class="contSkill reveal fade-up">
                 <div class="skillTitle">
-                    <img src="image/php.png" alt="PHP" style="height: 35px;">
+                    <img src="image/php.png" alt="PHP" style="filter: invert(1); height: 35px;">
                     <h4>PHP</h4>
                 </div>
                 <div class="indicator">
@@ -171,7 +183,7 @@
 
             <div class="contSkill reveal fade-up" style="animation-delay: 0.2s;">
                 <div class="skillTitle">
-                    <img src="image/html-5.png" alt="HTML5" style="height: 35px;">
+                    <img src="image/html-5.png" alt="HTML5" style="filter: invert(1); height: 35px;">
                     <h4>HTML</h4>
                 </div>
                 <div class="indicator">
@@ -181,7 +193,7 @@
 
             <div class="contSkill reveal fade-up" style="animation-delay: 0.3s;">
                 <div class="skillTitle">
-                    <img src="image/css-3.png" alt="CSS3" style="height: 35px;">
+                    <img src="image/css-3.png" alt="CSS3" style="filter: invert(1); height: 35px;">
                     <h4>CSS</h4>
                 </div>
                 <div class="indicator">
@@ -191,7 +203,7 @@
 
             <div class="contSkill reveal fade-up" style="animation-delay: 0.4s;">
                 <div class="skillTitle">
-                    <img src="image/mysql.png" alt="MySQL" style="height: 35px;">
+                    <img src="image/mysql.png" alt="MySQL" style="filter: invert(1); height: 35px;">
                     <h4>MySQL</h4>
                 </div>
                 <div class="indicator">
@@ -201,7 +213,7 @@
 
             <div class="contSkill reveal fade-up" style="animation-delay: 0.5s;">
                 <div class="skillTitle">
-                    <img src="image/c-.png" alt="C++" style="height: 35px;">
+                    <img src="image/c-.png" alt="C++" style="filter: invert(1); height: 35px;">
                     <h4>C++</h4>
                 </div>
                 <div class="indicator">
@@ -211,7 +223,8 @@
 
             <div class="contSkill reveal fade-up" style="animation-delay: 0.6s;">
                 <div class="skillTitle">
-                    <img src="image/logotipo-de-python-language.png" alt="Python" style="height: 35px;">
+                    <img src="image/logotipo-de-python-language.png" alt="Python"
+                        style="filter: invert(1); height: 35px;">
                     <h4>Python</h4>
                 </div>
                 <div class="indicator">
@@ -253,7 +266,7 @@
 
             <div class="contSkill reveal fade-up" style="animation-delay: 0.7s;">
                 <div class="skillTitle">
-                    <img src="image/red-de-computadoras.png" alt="Networking" style="height: 35px;">
+                    <img src="image/red-de-computadoras.png" alt="Networking" style="filter: invert(1); height: 35px;">
                     <h4>Sub Redes</h4>
                 </div>
                 <div class="indicator">
@@ -262,12 +275,111 @@
             </div>
 
         </section>
+
+        <!-- Proyectos -->
+        <section id="progects">
+
+        </section>
+
+        <!-- Contacto -->
+        <section id="contact">
+            <div class="contLinks glass">
+                <ul class="link">
+                    <li>
+                        <div title="GitHub" onclick="window.open('https://github.com/MiguelCochos', '_blank')">
+                            <img src="image/github.png" alt="GitHub">
+                        </div>
+                    </li>
+                    <li>
+                        <div title="Gmail" onclick="location.href='mailto:miguelcohos8@gmail.com'">
+                            <img src="image/gmail.png" alt="Gmail">
+                        </div>
+                    </li>
+                    <li>
+                        <div title="LinkedIn"
+                            onclick="window.open('https://www.linkedin.com/in/miguel-cochos-28a952327', '_blank')">
+                            <img src="image/linkedin.png" alt="LinkedIn">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
-    <script src="scripts.js"></script>
+    <div class="scrollIndicator">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
+        </svg>
+    </div>
+
     <footer class="footer">
-        <p>Todos los derechos reservados © 2026</p>
-        <p>Desarrollado por Miguel Cochos</p>
+        <span>Todos los derechos reservados © 2026</span>
+        <span>Desarrollado por Miguel Cochos</span>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+<script src="scripts.js"></script>
+<script>
+
+    //Control de tema
+
+    const theme = localStorage.getItem("theme");
+    const styleModeButton = document.getElementById("styleModeButton");
+
+    function setLightMode() {
+        document.body.classList.remove('dark-mode');
+        document.body.classList.add('light-mode');
+        gsap.set(styleModeButton, { x: 30, backgroundColor: "#ffffff" });
+        styleModeButton.classList.remove("dark");
+        styleModeButton.classList.add("light");
+        styleModeButton.innerHTML = "☀️";
+    }
+
+    function setDarkMode() {
+        document.body.classList.remove('light-mode');
+        document.body.classList.add('dark-mode');
+        gsap.set(styleModeButton, { x: 0, backgroundColor: "#0f172a" });
+        styleModeButton.classList.remove("light");
+        styleModeButton.classList.add("dark");
+        styleModeButton.innerHTML = "🌙";
+    }
+
+    if (theme === 'dark') {
+        setDarkMode();
+    } else if (theme === 'light') {
+        setLightMode();
+    } else if (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        localStorage.setItem("theme", "dark");
+        setDarkMode();
+    } else if (!theme && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        localStorage.setItem("theme", "light");
+        setLightMode();
+    } else {
+        localStorage.setItem("theme", "dark");
+        setDarkMode();
+    }
+
+    //Animasion slide del boton de tema
+    styleModeButton.addEventListener("click", () => {
+        if (styleModeButton.classList.contains("dark")) {
+            gsap.to(styleModeButton, { ease: "power2.out", duration: 0.8, x: 30, backgroundColor: "#ffffff" });
+            styleModeButton.classList.remove("dark");
+            styleModeButton.classList.add("light");
+            styleModeButton.innerHTML = "☀️";
+            localStorage.setItem("theme", "light");
+            document.body.classList.remove("dark-mode");
+            document.body.classList.add("light-mode");
+        } else {
+            gsap.to(styleModeButton, { ease: "power2.out", duration: 0.8, x: 0, backgroundColor: "#0f172a" });
+            styleModeButton.classList.remove("light");
+            styleModeButton.classList.add("dark");
+            styleModeButton.innerHTML = "🌙";
+            localStorage.setItem("theme", "dark");
+            document.body.classList.remove("light-mode");
+            document.body.classList.add("dark-mode");
+        }
+    });
+
+</script>
 
 </html>
