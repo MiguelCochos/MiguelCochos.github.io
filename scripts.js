@@ -69,19 +69,19 @@ document.addEventListener('DOMContentLoaded', () => {
 gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline({
+    ease: "power2.out",
     scrollTrigger: {
         trigger: "#home",
         start: "top top",
-        end: "+=90%",
-        ease: "power2.out",
+        end: "bottom bottom",
         scrub: 1,
     }
 });
 
-tl.to("#inspiration", { duration: 25, scale: 1 })
-    .to("#inspiration", { duration: 25, opacity: 0 }, "<")
-    .to("#logo-container", {
-        duration: 50, maskSize: "100px", onComplete: () => {
+tl.to("#logo-container", { duration: 100, maskSize: "100px" })
+    .to("#inspiration", { duration: 100, scale: 1 }, "<")
+    .to("#inspiration", {
+        duration: 100, opacity: 0, onComplete: () => {
             document.getElementById("navBar").style.display = "flex";
             document.getElementById("inspiration").pause();
             document.getElementById("inspiration").currentTime = 0;
@@ -90,7 +90,8 @@ tl.to("#inspiration", { duration: 25, scale: 1 })
             document.getElementById("navBar").style.display = "none";
             document.getElementById("inspiration").play();
         }
-    }, "<");
+    }, 5);
+
 
 const scrollIndicator = document.querySelector(".scrollIndicator");
 scrollIndicator.addEventListener("click", () => {
