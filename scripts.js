@@ -79,9 +79,9 @@ const tl = gsap.timeline({
 });
 
 tl.to("#logo-container", { duration: 100, maskSize: "100px" })
-    .to("#inspiration", { duration: 100, scale: 1 }, "<")
+    .to("#inspiration", { delay: 10, duration: 100, scale: 1 }, "<")
     .to("#inspiration", {
-        duration: 100, opacity: 0, onComplete: () => {
+        duration: 25, delay: 20, opacity: 0, onComplete: () => {
             document.getElementById("navBar").style.display = "flex";
             document.getElementById("inspiration").pause();
             document.getElementById("inspiration").currentTime = 0;
@@ -90,7 +90,7 @@ tl.to("#logo-container", { duration: 100, maskSize: "100px" })
             document.getElementById("navBar").style.display = "none";
             document.getElementById("inspiration").play();
         }
-    }, 5);
+    }, 50);
 
 
 const scrollIndicator = document.querySelector(".scrollIndicator");
