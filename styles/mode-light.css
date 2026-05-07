@@ -49,6 +49,14 @@ body.light-mode .indicator {
     background: rgba(0, 0, 0, 0.1);
 }
 
+body.light-mode .project-card {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+body.light-mode .project-card:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
 body.light-mode .video-container .info-container p {
     color: #ffffff;
     text-shadow:

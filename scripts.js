@@ -78,8 +78,8 @@ const tl = gsap.timeline({
     }
 });
 
-tl.to("#logo-container", { duration: 100, maskSize: "100px" })
-    .to("#inspiration", { delay: 10, duration: 100, scale: 1 }, "<")
+tl.to("#logo-container", { duration: 100, maskSize: "10rem" })
+    .to("#inspiration", { delay: 4, duration: 50, scale: 1 }, "<")
     .to("#inspiration", {
         duration: 25, delay: 20, opacity: 0, onComplete: () => {
             document.getElementById("navBar").style.display = "flex";
@@ -99,17 +99,27 @@ scrollIndicator.addEventListener("click", () => {
     scrollBy(0, windLength);
 });
 
-
+const gear = document.getElementById("gear");
 //Bucle de animacion del engranaje
-gsap.to("#mechanism #engranaje1", {
-    duration: 1,
-    rotation: 360,
-    repeat: -1,
-    ease: "linear"
+const gearAnimation = gsap.to("#gear", {
+    duration: 10,
+    ease: "linear",
+    cameraOrbit: "-520deg 200deg 300deg",
+    repeat: -1
 });
-gsap.to("#mechanism #engranaje2", {
-    duration: 1,
-    rotation: -360,
-    repeat: -1,
-    ease: "linear"
+
+gear.addEventListener("mousedown", () => {
+    gearAnimation.pause();
+});
+
+gear.addEventListener("mouseup", () => {
+    gearAnimation.play();
+});
+
+gear.addEventListener("touchstart", () => {
+    gearAnimation.pause();
+});
+
+gear.addEventListener("touchend", () => {
+    gearAnimation.play();
 });
