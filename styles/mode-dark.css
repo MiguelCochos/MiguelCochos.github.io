@@ -3,6 +3,22 @@
     src: url('../src/RobotoSlab-VariableFont_wght.ttf');
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('../src/Poppins-Thin.ttf');
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
 :root {
     --primary-color: #00d2ff;
     --secondary-color: #3a7bd5;
@@ -67,7 +83,6 @@ body {
     background-attachment: fixed;
     color: var(--text-main);
     overflow-x: hidden;
-    overscroll-behavior: none;
 }
 
 .menu-button {
@@ -99,8 +114,8 @@ body {
 
 .nav-logo #logoMC {
     opacity: 1;
-    height: 40px;
-    fill: var(--text-main);
+    width: 6rem;
+    filter: invert(1);
     cursor: pointer;
 }
 
@@ -422,12 +437,20 @@ body {
 /* Social Links */
 .contLinks {
     height: auto;
+    text-align: center;
     padding: 15px;
+}
+
+.contLinks h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .link {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     list-style: none;
 }
@@ -593,6 +616,12 @@ body {
     transition: transform 0.3s ease;
 }
 
+.project-card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
 .project-card:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.06);
@@ -732,7 +761,11 @@ body {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
+
+    #home #logo-container {
+        mask-size: clamp(1000vh, 4000rem, 5000vh);
+    }
 
     #logo-container p {
         width: 80%;
@@ -799,5 +832,12 @@ body {
         height: 250px;
     }
 
+    .link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        list-style: none;
+    }
 
 }

@@ -1,0 +1,41 @@
+body.dark-mode {
+    --primary-color: #00d2ff;
+    --secondary-color: #3a7bd5;
+    --accent-color: #00f2fe;
+    --bg: radial-gradient(circle at top left, #075985, #0f172a 50%, #082f49);
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --text-main: #f8fafc;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --mask-bg: #ffffff;
+    --scroll-start: #000000;
+    --scroll-mid: #ffffff;
+}
+
+body.dark-mode {
+    width: 100vw;
+    background: var(--bg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    padding: 80px 7%;
+    color: var(--text-main);
+}
+
+body.dark-mode .cont-logos .logo-mc {
+    filter: invert(1);
+}
+
+body.dark-mode .video-cont {
+    background: var(--card-bg);
+}
+
+body.dark-mode .video-cont:hover {
+    background-color: rgba(47, 117, 187, 0.295);
+}
+
+@media (max-width: 720px) {
+    body.dark-mode {
+        padding: 70px 20px;
+    }
+
+}

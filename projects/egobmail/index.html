@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eGobMail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="../../styles/load-page.css">
+</head>
+
+<body class="light-mode">
+
+    <!--Loading Page-->
+    <div id="loadPage" class="active">
+        <div id="load-circle">
+            <img src="../../image/new-logo.svg" alt="">
+        </div>
+    </div>
+
+    <!-- header -->
+    <header>
+        <div class="cont-logos">
+            <svg class="logo-mc" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 312.08">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: none;
+                            stroke: #000000ff;
+                            stroke-width: 2px;
+                        }
+
+                        .cls-1,
+                        .cls-2 {
+                            stroke-miterlimit: 10;
+                        }
+
+                        .cls-2 {
+                            stroke: #000000ff;
+                            stroke-width: 4px;
+                        }
+                    </style>
+                </defs>
+                <path
+                    d="m300.97,73.13c-5.56-.15-10.15-.19-15.98.88-5.32.97-8.75,2.33-10.69,3.19-3.2,1.43-5.65,3-7.08,4-.17.12-2,1.4-3.82,2.99-3.68,3.21-37.78,34.23-84.2,76.59,7.38,7.26,14.75,14.51,22.13,21.77,40.83-36.12,81.66-72.24,122.5-108.35-8.87-.58-16.58-.89-22.85-1.05Z" />
+                <path
+                    d="m519.24,114.3c-.55-2.59-1.78-4.45-2.57-5.46-.08.56-.28,1.41-.8,2.33-.39.67-.83,1.16-1.18,1.5-1.79-.79-3.81-1.84-5.93-3.22-3.01-1.97-5.36-4.06-7.11-5.87-.08-1.68-.35-3.86-1.09-6.31-.67-2.21-1.53-4.01-2.31-5.38-3.9-2.82-6.85-5.39-8.86-7.25-2.61-2.42-3.75-3.76-9.9-9.76-2.08-2.03-3.14-3.06-4.05-3.87-3.11-2.73-3.69-2.68-8.93-6.78-6.93-5.42-10.08-8.76-10.43-8.42-.37.35,2.82,4.1,9.16,12.51,2.45,3.26,4.44,5.96,5.76,7.78-5.68-3.1-11.83-6.82-18.21-11.29-7.55-5.29-14.04-10.64-19.52-15.65,3.18,4.6,6.8,9.44,10.89,14.4,3.38,4.1,6.73,7.86,9.99,11.29-1.36-.11-2.91-.23-4.64-.35,0,0-2.86-.2-5.69-.38-12.17-.73-44.65-.56-44.65-.56-17.82.09-38.55-.13-48.62,2.49-7.28,1.9-13.94,5-13.94,5-2.1.98-3.7,1.84-4.29,2.17-4.14,2.3-7.33,4.55-9.35,6.06-2.55,1.87-4.81,3.55-7.52,6.2-1.32,1.29-3.93,3.98-6.66,7.88-1.8,2.56-3.89,5.99-5.75,10.29-2.19,1.97-4.38,3.97-6.59,6-2.71,2.5-5.35,4.98-7.95,7.46.02-.08.08-.3.1-.38,1.65-6.28,3.38-12.52,5.17-18.7-10.39,9.22-20.78,18.44-31.18,27.67-6.19,33.52-12.38,67.04-18.57,100.56h72.79c-4.7-1.76-11.8-5.07-18.71-11.32-17.08-15.45-19.17-36.38-19.65-42.27-1.15-14.09,2.34-25.61,5.29-32.72,9.75-8.99,19.51-17.98,29.26-26.97-.06-.26-.11-.58-.1-.95.06-2.04,1.87-5.05,5.05-5.05,2.79,0,5.05,2.26,5.05,5.05s-2.26,5.05-5.05,5.05c-.36,0-.7-.04-1.04-.11-8.91,8.62-17.82,17.25-26.72,25.87-2.03,5.36-4.67,14.4-4.24,25.73.22,5.69.88,18.84,9.76,31.81,12.14,17.74,30.79,22.34,35.02,23.26,1.77.39,3.03.56,5.56.91,12.74,1.77,20.13.62,44.02.62h0c8.84-.06,15.84-.04,20.74,0,4.09.03,8.18-.06,12.27,0,4.81.07,7.25.2,11-.25,1.51-.18,5.05-.6,8.1-1.63,5.21-1.76,7.9-5.22,14.76-12.51,3.61-3.83,8.16-8.9,13.2-15.14-11.09-.23-19.96-.14-25.45-.04,0,0-48,.86-78.73-.79-1.33-.07-4.36-.26-8.02-1.53-2.8-.98-10.29-4.09-14.79-11.65-3.34-5.6-3.38-10.84-3.44-18.81-.02-2.51.13-1.55,1.6-16.53.9-9.15,1.09-12.04,1.95-17.24.76-4.56,1.6-8.28,2.21-10.76-8.15,7.95-16.31,15.89-24.46,23.84.17,2.93-2.18,5.4-5,5.42-2.74.01-5.05-2.28-5.05-5.05,0-3.09,2.89-5.01,5.05-5.05.6,0,1.11.13,1.47.27,4.92-5.09,9.13-9.3,12.28-12.39,1.95-1.92,3.63-3.54,5.22-5.05,4.36-4.15,6.74-6.43,9.34-8.67,2.81-2.41,6.93-5.93,12.85-9.45,3.2-1.9,7.69-4.5,13.87-6.34,6.5-1.93,11.75-2.09,15.52-2.17,16.14-.35,30.51-.19,38.82-.04,14.28.43,28.56.87,42.84,1.3,1.68.6,3.93,1.57,6.35,3.19.62.41,2.56,1.81,5.72,5.03,6.89,7.05,8.08,12.03,8.14,13.75.01.45.05,1.49-.64,2.33-.62.76-1.52.97-1.93,1.04,2.05.86,5.61,2.7,8.6,6.43,1.43,1.79,2.36,3.54,2.97,4.98,1.49-.27,4.64-1.05,7.55-3.62,1.84-1.63,2.93-3.38,3.54-4.58-.45.11-.95.19-1.5.2-2.57.07-4.51-1.32-5.31-1.98-.65-.41-2.38-1.62-3.38-3.96-.97-2.25-.71-4.26-.57-5.03-1.1-1.88-2.23-4.02-3.29-6.43-1.21-2.74-2.12-5.32-2.81-7.63,2.14.5,4.31,1.04,6.51,1.61,1.94.5,3.84,1.01,5.7,1.53.88,1.43,2.53,3.7,5.3,5.66,2.31,1.64,4.54,2.46,6.05,2.88.16.18,1.1,1.27.95,2.87-.14,1.53-1.17,2.41-1.37,2.57.95-.16,2.12-.44,3.37-.96.73-.3,1.38-.64,1.93-.96.08.67.14,1.96-.4,3.46-.59,1.61-1.58,2.61-2.09,3.05,1.35-.17,4.86-.8,7.79-3.7,5.04-4.97,3.69-11.96,3.62-12.29Zm-23.26-10.6c-.29.39-3.27-2.14-8.2-3.43-1.94-.51-3.61-.68-4.77-.75-.62-1.47-1.29-2.97-2.01-4.5-.84-1.79-1.68-3.49-2.53-5.13.69.38,1.76.97,3.08,1.69,1.86,1.01,2.18,1.18,2.87,1.58,2.02,1.14,3.04,1.72,3.74,2.25.78.59,1.62,1.44,3.3,3.15.95.97,1.52,1.58,2.35,2.5,1.52,1.66,2.28,2.5,2.17,2.65Z" />
+                <path
+                    d="m503.17,191.11c-3.12,0-5.77,2.05-6.73,4.89h-96.22c-13.01.7-17.09,1.38-17.09,1.99,0,.61,4.07,1.37,17.09,2.31h96.09c.83,3.08,3.58,5.35,6.87,5.35,3.94,0,7.13-3.25,7.13-7.27s-3.19-7.27-7.13-7.27Zm0,12.21c-2.68,0-4.85-2.21-4.85-4.94s2.17-4.94,4.85-4.94,4.85,2.21,4.85,4.94-2.17,4.94-4.85,4.94Z" />
+                <line class="cls-2" x1="441.7" y1="220.84" x2="466.89" y2="220.84" />
+                <circle class="cls-1" cx="472.11" cy="220.84" r="5.85" />
+                <path
+                    d="m142.04,77.22c-1.89-1-3.84-1.68-3.84-1.68s-2.48-.86-5.31-1.27c-3.55-.52-19.31-.67-40.78,0-3.11,21.88-6.23,43.76-9.34,65.63l-4.08,28.68h0c-3.21,22.55-6.42,45.1-9.63,67.65h30.64c2.69-21.03,5.37-42.06,8.06-63.08h0l3.99-31.21c1.83-14.32,3.66-28.64,5.49-42.96,19.17,19.19,38.34,38.38,57.51,57.57l24.15-21.26c-30.63-33-53.67-56.37-56.85-58.06Zm-41.62,60.84l-7.77,51.2c.92.91,1.5,2.16,1.5,3.55,0,2.76-2.26,4.99-5.05,4.99s-5.05-2.24-5.05-4.99c0-1.92,1.1-3.56,2.7-4.4l7.84-51.61c-.78-.88-1.28-2.02-1.28-3.29,0-2.76,2.26-4.99,5.05-4.99s5.05,2.24,5.05,4.99c0,2.03-1.23,3.77-2.99,4.55Z" />
+            </svg>
+            <p>X</p>
+            <img src="" id="logoGm" class="logo-gm" alt="Logo Gobierno de Miranda">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section id="info" class="card">
+            <div class="cont-info">
+                <h1>eGobMail</h1>
+                <p>Es una plataforma de control de correspondencia segura y confiable para el Gobierno del
+                    Estado de
+                    Miranda, diseñada para facilitar la comunicación entre los servidores públicos.</p>
+            </div>
+            <div class="front-page">
+                <img src="src/front-page.jpg" alt="Portada de eGobMail" style="view-transition-name: img-01;">
+            </div>
+        </section>
+        <section id="anexos" class="card">
+
+            <!-- Panel de inicio de sesion -->
+            <div class="views login">
+                <div class="title-view">
+                    <h2>Inicio de sesion</h2>
+                    <p>Este módulo gestiona el acceso seguro al sistema eGobMail mediante autenticación de credenciales.
+                        Valida rigurosamente usuarios y contraseñas contra la base de datos de la
+                        gobernación, previniendo accesos no autorizados y asegurando rutas privadas. Esto garantiza la
+                        integridad de la información gubernamental y la trazabilidad de cada servidor público.</p>
+                </div>
+
+                <div class="video-cont">
+                    <video src="src/login-view.mov" controls muted controlslist="nodownload nopictureinpicture"
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+
+                <h3>Alertas de inicio de sesión</h3>
+
+                <div class="video-cont">
+                    <p>Contraseña incorrecta</p>
+                    <video src="src/Login-pass-error.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+
+                <div class="video-cont">
+                    <p>Usuario no encontrado o deshabilitado</p>
+                    <video src="src/login-user-error.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>URL protegidas</p>
+                    <video src="src/login-session-error.mov" controls muted
+                        controlslist="nodownload nopictureinpicture " oncontextmenu="return false;"
+                        disablePictureInPicture></video>
+                </div>
+            </div>
+
+            <!-- Panel inicial de la app -->
+
+            <div class="views dashboard">
+                <div class="title-view">
+                    <h2>Panel Inicial</h2>
+                    <p>El Dashboard principal proporciona una visión consolidada e indicadores clave del rendimiento
+                        operativo de la gobernación en tiempo real. Ofrece a los usuarios un acceso ágil a los módulos
+                        críticos y resúmenes estadísticos sobre el flujo de correspondencia entrante y saliente,
+                        optimizando la toma de decisiones y facilitando la priorización de tareas diarias en la gestión
+                        pública.</p>
+                </div>
+                <div class="video-cont">
+                    <video src="src/home-view.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+            </div>
+
+            <!-- Panel de administración de los departamentos  -->
+
+            <div class="views departments">
+                <div class="title-view">
+                    <h2>Panel de Administración de Departamentos</h2>
+                    <p>Módulo centralizado para estructurar y organizar la gobernación. Los administradores disponen de
+                        privilegios exclusivos CRUD para registrar nuevos departamentos, editar detalles y deshabilitar
+                        áreas inactivas para mantener la coherencia organizativa. Los usuarios de nivel estándar pueden
+                        consultar la lista de dependencias habilitadas para direccionar correspondencias, facilitando la
+                        comunicación interdepartamental fluida.</p>
+                </div>
+                <div class="indicator">
+                    <p>Admin</p>
+                    <p>Normal</p>
+                </div>
+                <div class="image-cont" onmousemove="revealImages(0, event)">
+                    <img src="src/depart-view-normal.jpg" alt="Departments view" class="img-base">
+                    <div class="image-wrapper">
+                        <img src="src/depart-view-admin.jpg" alt="Departments view admin" class="img-admin">
+                    </div>
+                    <div class="separator"></div>
+                </div>
+                <div class="video-cont">
+                    <p>Funcion para crear departamentos</p>
+                    <video src="src/depart-create.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Funcion para editar departamentos</p>
+                    <video src="src/depart-edit.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Funcion para deshabilitar departamentos</p>
+                    <video src="src/depart-disable.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+            </div>
+
+            <!-- Panel para la administración de usarios -->
+
+            <div class="views users" id="users">
+                <div class="title-view">
+                    <h2>Panel de Administración de usuarios</h2>
+                    <p>Módulo de gobernanza que centraliza el control de acceso de los servidores públicos. Permite a
+                        los administradores crear, modificar y deshabilitar cuentas y asignar roles. Incluye filtros de
+                        búsqueda avanzada por nombre, cédula o departamento, garantizando una administración segura,
+                        transparente y segmentada según el nivel de responsabilidad institucional.</p>
+                </div>
+                <div class="indicator">
+                    <p>Admin</p>
+                    <p>Normal</p>
+                </div>
+                <div class="image-cont" id="containerUsers" onmousemove="revealImages(1, event)">
+                    <img src="src/users-view-normal.jpg" alt="User view in normal" class="img-base">
+
+                    <div class="image-wrapper" id="userAdminView">
+                        <img src="src/users-view-admin.jpg" alt="User view admin" class="img-admin">
+                    </div>
+
+                    <div class="separator" id="separatorUsers"></div>
+                </div>
+                <div class="video-cont">
+                    <p>Función para crear usuarios</p>
+                    <video src="src/users-create.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Función para editar usuarios</p>
+                    <video src="src/users-update.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Función para deshabilitar usuarios</p>
+                    <video src="src/users-disable.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Función para buscar usuarios</p>
+                    <video src="src/users-search.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+            </div>
+
+            <!-- Panel para la administración de requerimientos -->
+
+            <div class="views requirement">
+                <div class="title-view">
+                    <h2>Panel de Administración de Requerimientos</h2>
+                    <p>Facilita la estandarización y control de las solicitudes oficiales dirigidas a la gobernación.
+                        Los administradores gestionan el catálogo de tipos de requerimientos, con facultades para crear,
+                        actualizar y deshabilitar categorías operativas. Este control centralizado asegura que la
+                        correspondencia entrante sea clasificada de manera uniforme, agilizando los tiempos de respuesta
+                        interna.</p>
+                </div>
+                <div class="indicator">
+                    <p>Admin</p>
+                    <p>Normal</p>
+                </div>
+                <div class="image-cont" onmousemove="revealImages(2, event)">
+
+                    <img src="src/req-view-normal.jpg" alt="req-view-normal" class="img-base">
+
+                    <div class="image-wrapper">
+                        <img src="src/req-view-admin.jpg" alt="req-view-admin" class="img-admin">
+                    </div>
+                    <div class="separator"></div>
+                </div>
+                <div class="video-cont">
+                    <p>Función para crear requerimientos</p>
+                    <video src="src/req-create.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Función para editar requerimientos</p>
+                    <video src="src/req-update.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Función para deshabilitar requerimientos</p>
+                    <video src="src/req-disable.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+            </div>
+
+            <!-- Panel de administración de estatus -->
+
+            <div class="views status">
+                <div class="title-view">
+                    <h2>Panel de Administración de Estatus</h2>
+                    <p>Permite parametrizar las distintas etapas del ciclo de vida de los trámites. Los usuarios
+                        autorizados pueden registrar nuevos estatus y editar descripciones para reflejar con precisión
+                        el progreso de la correspondencia institucional. Este módulo aporta transparencia operacional y
+                        facilita la medición del desempeño de los flujos de trabajo en cada departamento.</p>
+                </div>
+                <div class="image-cont">
+                    <!-- <p>Vista general del panel de estatus</p> -->
+                    <img src="src/status-view.png" alt="status-view" class="img-base">
+                </div>
+                <div class="video-cont">
+                    <p>Función para crear estatus</p>
+                    <video src="src/status-create.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Función para editar estatus</p>
+                    <video src="src/status-update.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+            </div>
+
+            <!-- Panel de administración para la correspondencia -->
+
+            <div class="views correspondences">
+                <div class="title-view">
+                    <h2>Panel de Administración de Correspondencia</h2>
+                    <p>El núcleo de eGobMail. Este módulo permite registrar, editar y realizar el seguimiento en tiempo
+                        real (tracking) de la correspondencia interna y externa de la gobernación. Cuenta con motores de
+                        búsqueda avanzada por remitente, fecha o código, además de opciones de exportación
+                        individual o masiva a formatos portables, garantizando la trazabilidad documental.</p>
+                </div>
+                <div class="video-cont">
+                    <p>Vista general de la correspondencia</p>
+                    <video src="src/corres-view.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Funcion para cargar la correspondencia</p>
+                    <video src="src/corres-create.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Funcion para editar la correspondencia</p>
+                    <video src="src/corres-update.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Funcion para exportar una correspondencia</p>
+                    <video src="src/corres-export.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Funcion para exportar todas las correspondencias</p>
+                    <video src="src/corres-export-all.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Funcion de busqueda avanzada para la correspondencia</p>
+                    <video src="src/corres-search.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+                <div class="video-cont">
+                    <p>Funcion para el rastreo de la correspondencia</p>
+                    <video src="src/corres-tracking.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+            </div>
+
+            <!-- Panel de notificaciones -->
+
+            <div class="views notifications">
+                <div class="title-view">
+                    <h2>Panel de Notificaciones</h2>
+                    <p>Centro de mensajería instantánea que alerta a los servidores públicos sobre correspondencia
+                        asignada, cambios de estatus y requerimientos urgentes. Con una interfaz dinámica y no
+                        intrusiva, proporciona actualizaciones inmediatas sobre eventos críticos del flujo de trabajo,
+                        lo que minimiza cuellos de botella y mejora la coordinación operativa interdepartamental.</p>
+                </div>
+                <div class="video-cont">
+                    <video src="src/notification.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+            </div>
+
+            <!-- Panel para la administración de perfil para los usuarios -->
+
+            <div class="views profile">
+                <div class="title-view">
+                    <h2>Perfil de Usuario</h2>
+                    <p>Espacio individualizado para que cada servidor público consulte su información de registro y rol
+                        asignado dentro de la gobernación. Permite la actualización segura de datos y la
+                        autogestión para el cambio de credenciales de acceso, robusteciendo la política general de
+                        seguridad informática del sistema eGobMail.</p>
+                </div>
+                <div class="video-cont">
+                    <video src="src/profile-user.mov" controls muted controlslist="nodownload nopictureinpicture "
+                        oncontextmenu="return false;" disablePictureInPicture></video>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+
+    <div class="styleMode">
+        <button id="styleModeButton" class="dark">
+            🌙
+        </button>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="script.js"></script>
+<script>
+
+    //Control de tema
+
+    const theme = localStorage.getItem("theme");
+    const styleModeButton = document.getElementById("styleModeButton");
+
+    function setLightMode() {
+        document.body.classList.remove('dark-mode');
+        document.body.classList.add('light-mode');
+        window.innerWidth < 720 ? logoGm.src = "src/icon-gm-p.png" : logoGm.src = "src/logo-gm-light.png";
+        gsap.set(styleModeButton, { x: 30, backgroundColor: "#ffffff" });
+        styleModeButton.classList.remove("dark");
+        styleModeButton.classList.add("light");
+        styleModeButton.innerHTML = "☀️";
+    }
+
+    function setDarkMode() {
+        document.body.classList.remove('light-mode');
+        document.body.classList.add('dark-mode');
+        window.innerWidth < 720 ? logoGm.src = "src/icon-gm-p.png" : logoGm.src = "src/logo-gm-dark.png";
+        gsap.set(styleModeButton, { x: 0, backgroundColor: "#0f172a" });
+        styleModeButton.classList.remove("light");
+        styleModeButton.classList.add("dark");
+        styleModeButton.innerHTML = "🌙";
+    }
+
+    if (theme === 'dark') {
+        setDarkMode();
+    } else if (theme === 'light') {
+        setLightMode();
+    } else if (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        localStorage.setItem("theme", "dark");
+        setDarkMode();
+    } else if (!theme && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        localStorage.setItem("theme", "light");
+        setLightMode();
+    } else {
+        localStorage.setItem("theme", "dark");
+        setDarkMode();
+    }
+
+    //Animación slide del boton de tema
+    styleModeButton.addEventListener("click", () => {
+
+        const logoGm = document.getElementById('logoGm');
+
+        if (styleModeButton.classList.contains("dark")) {
+            gsap.to(styleModeButton, { ease: "power2.out", duration: 0.8, x: 30, backgroundColor: "#ffffff" });
+            localStorage.setItem("theme", "light");
+            setTimeout(() => {
+                setLightMode();
+            }, 100)
+        } else {
+            gsap.to(styleModeButton, { ease: "power2.out", duration: 0.8, x: 0, backgroundColor: "#0f172a" });
+            setTimeout(() => {
+                setDarkMode();
+            }, 100)
+            localStorage.setItem("theme", "dark");
+        }
+    });
+
+
+
+
+    window.addEventListener('load', () => {
+        let loadPage = document.getElementById("loadPage");
+        loadPage.style.opacity = "0";
+
+        loadPage.addEventListener("transitionend", () => {
+            loadPage.classList.remove("active");
+            loadPage.style.display = "none";
+            document.body.style.overflowY = "auto";
+        })
+    })
+
+</script>
+
+</html>
+
+</html>

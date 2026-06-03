@@ -99,6 +99,22 @@ scrollIndicator.addEventListener("click", () => {
     scrollBy(0, windLength);
 });
 
+// 1. Desactivamos la restauración automática del navegador
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+
+// 2. Al cargar la página, forzamos el scroll arriba y reiniciamos GSAP
+window.addEventListener("DOMContentLoaded", () => {
+    window.onload = function () {
+        setTimeout(function () {
+            window.scrollTo(0, 0);
+        }, 10);
+    };
+    // Le decimos a GSAP que recalcule todas las posiciones
+    ScrollTrigger.refresh();
+});
+
 const gear = document.getElementById("gear");
 //Bucle de animacion del engranaje
 const gearAnimation = gsap.to("#gear", {

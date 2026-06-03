@@ -13,8 +13,6 @@ body.light-mode {
     --text-muted: #475569;
     --glass-border: rgba(0, 0, 0, 0.1);
     --mask-bg: #ffffff;
-    --scroll-start: #ffffff;
-    --scroll-mid: #000000;
 }
 
 body.light-mode #home {
