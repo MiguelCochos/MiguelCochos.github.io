@@ -413,7 +413,6 @@ body {
 .helloWorld p:nth-child(1) {
     font-size: 1.1rem;
     color: var(--secondary-color);
-    font-weight: 500;
 }
 
 .helloWorld p:nth-child(2) {
@@ -427,11 +426,6 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.helloWorld p:nth-child(3) {
-    color: var(--text-muted);
-    font-size: 1.1rem;
 }
 
 /* Social Links */
