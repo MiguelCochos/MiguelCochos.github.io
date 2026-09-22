@@ -81,15 +81,18 @@ const tl = gsap.timeline({
 tl.to("#logo-container", { duration: 100, maskSize: "10rem" })
     .to("#inspiration", { delay: 4, duration: 50, scale: 1 }, "<")
     .to("#inspiration", {
-        duration: 25, delay: 20, opacity: 0, onComplete: () => {
+        duration: 25, delay: 20, opacity: 0, onComplete: async () => {
             document.getElementById("navBar").style.display = "flex";
             document.getElementById("inspiration").pause();
             document.getElementById("inspiration").currentTime = 0;
+            laptopMC.animationName = "apertura";
+            await laptopMC.updateComplete;
+            laptopMC.play({ repetitions: 1 });
         },
         onUpdate: () => {
             document.getElementById("navBar").style.display = "none";
             document.getElementById("inspiration").play();
-        }
+        },
     }, 50);
 
 
@@ -115,27 +118,22 @@ window.addEventListener("DOMContentLoaded", () => {
     ScrollTrigger.refresh();
 });
 
-const gear = document.getElementById("gear");
-//Bucle de animacion del engranaje
-const gearAnimation = gsap.to("#gear", {
-    duration: 10,
-    ease: "linear",
-    cameraOrbit: "-520deg 200deg 300deg",
-    repeat: -1
+const laptopMC = document.getElementById("laptopMC");
+
+laptopMC.addEventListener('finished', async (event) => {
+    if (laptopMC.animationName === "apertura") {
+        laptopMC.animationName = "giro";
+        await laptopMC.updateComplete;
+        laptopMC.play();
+    } else if (laptopMC.animationName === "giro") {
+        laptopMC.pause();
+    }
 });
 
-gear.addEventListener("mousedown", () => {
-    gearAnimation.pause();
+laptopMC.addEventListener('mousedown', () => {
+    laptopMC.pause();
 });
 
-gear.addEventListener("mouseup", () => {
-    gearAnimation.play();
-});
-
-gear.addEventListener("touchstart", () => {
-    gearAnimation.pause();
-});
-
-gear.addEventListener("touchend", () => {
-    gearAnimation.play();
+laptopMC.addEventListener('mouseup', () => {
+    laptopMC.play();
 });

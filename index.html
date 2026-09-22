@@ -17,11 +17,7 @@
             <img src="image/new-logo.svg" alt="">
         </div>
     </div>
-    <div class="styleMode">
-        <button id="styleModeButton" class="dark">
-            🌙
-        </button>
-    </div>
+
     <header id="navBar" class="nav-bar">
         <div class="nav-logo">
             <svg id="logoMC" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 312.08">
@@ -121,9 +117,9 @@
                 </div>
             </div>
 
-            <model-viewer id="gear" src="models/gear.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-                tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" autoplay exposure="1"
-                interaction-prompt="none" disable-zoom camera-orbit="145deg 0deg 0deg">
+            <model-viewer id="laptopMC" src="models/laptop-MC.glb" ar ar-modes="webxr scene-viewer quick-look"
+                camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="1"
+                interaction-prompt="none" animation-name="base" disable-zoom loading="eager" reveal="auto">
                 <div class="progress-bar hide" slot="progress-bar">
                     <div class="update-bar"></div>
                 </div>
@@ -336,7 +332,14 @@
                 </ul>
             </div>
         </section>
+
+        <div class="styleMode">
+            <button id="styleModeButton" class="dark">
+                🌙
+            </button>
+        </div>
     </main>
+
     <div class="scrollIndicator">
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
             <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
